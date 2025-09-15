@@ -1,0 +1,34 @@
+void DEBUG_USART_IRQHandler(void)
+{
+    // if(USART_GetITStatus(DEBUG_USARTx, USART_IT_IDLE) != RESET) //接收中断
+    // {
+        // DEBUG_USARTx->SR; //读取状态寄存器，清除中断标志
+        // DEBUG_USARTx->DR; //读取数据寄存器，清除中断标
+		// DMA_Cmd(DMA1_Channel5, DISABLE );
+		// if (dma_buffer_is_full(&debug_dmabuffer))
+		// {
+			// ;
+		// }
+		// else
+		// {
+			// dma_buffer_write_count(&debug_dmabuffer, (DMA_BUFFER_SIZE+1) - DMA_GetCurrDataCounter(DMA1_Channel5)); //计算接收到的数据长度
+			// dma_buffer_write_next(&debug_dmabuffer); //切换到下一个缓冲区
+			// DMA1_Channel5->CMAR = (uint32_t)&debug_dmabuffer.data[debug_dmabuffer.write_index][0]; //更新内存地址
+			// DMA1_Channel5->CNDTR = DMA_BUFFER_SIZE+1; //更新传输大小
+		// }
+        // DMA_Cmd(DMA1_Channel5, ENABLE);
+		// 
+				// 
+	//	Ringbuff_WriteReceiveFlag(&enoceanbuff, true);
+    // }
+    }
+
+
+}
+
+
+// if (dma_buffer_is_empty(&esp_dmabuffer) == false) //检查DMA缓冲区是否为空
+// {
+	// v_esp8266_receive_deal((char*)esp_dmabuffer.data[esp_dmabuffer.read_index]); //调用cJSON解析函数
+	// dma_buffer_read_next(&esp_dmabuffer); //切换到下一个缓冲区
+// }
